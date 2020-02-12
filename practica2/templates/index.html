@@ -1,64 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body>
     <h1 class="text-center mt-2">La Brocha Gorda</h1>
-    <div class="container">
-        <div class="jumbotron">
+    <div class="container col-6">
+        <div class="jumbotron" style="background: #D0DB97;">
             <div class="row">
-                <div class="col-12">
+                <div class="col-6">
                     <div class="form-group">
                         <label for="">Altura del Muro:</label>
-                        <input required id="altura" type="number" class="form-control" placeholder="metros" >
+                        <input id="altura" type="number" class="form-control" placeholder="metros">
                     </div>
-    
+
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12">
+                <div class="col-6">
                     <div class="form-group">
                         <label for="">Longitud del Muro:</label>
-                        <input  id="longitud" type="number" class="form-control" placeholder="metros">
-                    </div>    
+                        <input id="longitud" type="number" class="form-control" placeholder="metros">
+                    </div>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-3">
                     <div class="form-group">
-                        <label for="">Precio del m<sup>2</sup> Pintado ($)</label>
-                        <output id="costopormetro2" type="number" class="form-control" placeholder="metros"> 25.00
-                    </div>    
+                        <label for="">Precio del m<sup>2</sup> Pintado ($) </label>
+                        <output id="costopormetro2" type="number" class="form-control" placeholder="metros"> 55.00
+                    </div>
                 </div>
             </div>
 
-            
-            
-
             <div class="row">
                 <div class="col-12">
-                    <button id="btnCotizar" class="btn btn-outline-success btn-block">Solicita tu Cotizacion</button> <br>
-                    <label  class="text-center" for="">Usted pagara un total de (Pesos):</label>
+                    <button id="btnCotizar" class="btn btn-outline-success btn-block">Solicita tu Cotizacion</button>
+                    <br>
+                    <label class="text-center" for="">Usted pagara un total de (Pesos):</label>
                 </div>
             </div>
 
             <div id="CostoTotal" class="text-center alert alert-danger mt-3" role="alert">
                 Llena todos los campos para obtener el Costo de tu tabajo de pintura
             </div>
-            
+
         </div>
     </div>
-    
-
-
-
 
     <script src="./../js/app.js"></script>
 </body>
+
 </html>
