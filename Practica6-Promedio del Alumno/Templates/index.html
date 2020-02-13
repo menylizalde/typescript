@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Tu Promedio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <h1 class="text-center">Calculo de Promedio</h1>
+      <div class="container">
+          <div class="jumbotron">
+              <div class="row">
+                  <div class="col-3">
+                      <div class="form-group">
+                          <label for="">Matricula</label>
+                          <input  id="matricula" class="form-control" type="number" name="" id="">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-2">
+                      <div class="form-group">
+                          <label for="">Calificacion 1</label>
+                          <input  class="form-control" type="number" name="" id="materia1">
+                      </div>
+                  </div>
+                  <div class="col-2">
+                      <div class="form-group">
+                          <label for="">Calificacion 2</label>
+                          <input  class="form-control" type="number" name="" id="materia2">
+                      </div>
+                  </div>
+                  <div class="col-2">
+                      <div class="form-group">
+                          <label for="">Calificacion 3</label>
+                          <input  class="form-control" type="number" name="" id="materia3">
+                      </div>
+                  </div>
+                  <div class="col-2">
+                      <div class="form-group">
+                          <label for="">Calificacion 4</label>
+                          <input  class="form-control" type="number" name="" id="materia4">
+                      </div>
+                  </div>
+                  <div class="col-2">
+                      <div class="form-group">
+                          <label for="">Calificacion 5</label>
+                          <input  class="form-control" type="number" name="" id="materia5">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-12">
+                      <button id="btnPromediar" class="col-12 btn btn-outline-info btn-block">Promediar Calificaciones</button>
+                  </div>
+                  <label  class="form-control col-6 text-center" for="">Esta es Tu Matricula</label><div id="ImprimirMatricula" class=" text-center col-6 alert alert-primary" role="alert">Matricula</div>
+                   <label class="form-control col-6 text-center" for="">Este Es Tu Promedio</label><div id="ImprimirResultado" class=" text-center col-6 alert alert-primary" role="alert">Promedio</div>
+              </div>
+          </div>
+      </div>
+
+      <script src="./../js/app.js"></script>
+  </body>
+</html>
