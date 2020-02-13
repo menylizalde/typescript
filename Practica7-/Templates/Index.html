@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <h1 class="text-center">Sistema de Evaluacion</h1>
+      <div class="container">
+          <div class="jumbotron">
+              <div class="row">
+                  <div class="col-4">
+                      <label for="">Respuestas Correctas</label>
+                      <input id="inpRCorrectas" class="form-control" type="number">
+                  </div>
+                  <div class="col-4">
+                      <label for="">Respuestas Incorrectas</label>
+                      <input id="inpRIncorrectas" class="form-control" type="number">
+                  </div>
+                  <div class="col-4">
+                      <label for="">Respuestas en Blanco</label>
+                      <input id="inpRBlanco" class="form-control" type="number">
+                  </div>
+                  
+              </div>
+              <div class="row">
+                  <div class="col-4">
+                      <button id="btnPuntuacion" class="mt-3 btn btn-outline-info btn-block">Consultar Puntuacion</button>
+                  </div>
+                </div>
+                      <div class=" mt-3 col-6">
+                          <label   id="ImprimirPuntaje" class=" text-center col-6 aler alert-primary" role="alert" for="">Puntos Totales</label>
+                      </div>
+      </div>
+<script src="./../js/app.js"></script>
+  </body>
+</html>
