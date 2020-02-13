@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <h1 class="text-center">Distancia Recorrida</h1>
+      <div class="container">
+          <div class="jumbotron">
+              <div class="row">
+                  <div class="col-3">
+                      <div class="form-group">
+                          <label for=""> Velocidad (m/s) </label>
+                          <input id="inpVelocidad" type="number" >
+                      </div>
+                  </div>
+                    <div class="col-3">
+                        <div class="form-group">
+                            <label for=""> Tiempo (s) </label>
+                            <input id="inpTiempo" type="number" >
+                        </div>
+                    </div>
+              </div>
+              <div class="col-12">
+                  <button  class="col-6 btn btn-warning" id="btnDistancia">Calcular la distancia Recorrida</button>
+              </div>
+              <div>
+                  <p class="text-center col-6">Distancia Recorrida en mts:</p>
+                  <label id="ImprimirResultado" class="form-control col-6 text-center alert alert-warning" for="">metros</label>
+              </div>
+          </div>
+      </div>
+
+
+    <script src="./../js/app.js"></script>
+  </body>
+</html>
