@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+      <div class="container col-6">
+          <h1 class="text-center">Costo de LLenado de Alberca</h1>
+          <div class="jumbotron">
+              <div class="row">
+                  <div class="col-4">
+                      <label for="">Longitud Alberca (m)</sub></label>
+                      <input id="inpLongitud" type="number">
+                      <label for="">Ancho Alberca (m)</sub></label>
+                      <input id="inpAncho" type="number">
+                  </div>
+                  <div class="col-4">
+                      <label for="">Profundidad Alberca (m)</label>
+                      <input id="inpProfundidad" type="number">
+                      <label for="">Precio del m<sup>3</sup></label>
+                      <input id="inpPrecio" type="number">
+                  </div>
+                  <div class="col-12">
+                      <button id="btnCostoLlenado" class="mt-3 col-12 btn btn-outline-warning btn-block">Calcular Precio de LLenado</button>
+                  </div>
+                  <div class="col-12">
+                    <label id="ImprimirCosto" class=" mt-3 col-12 text-center alert alert-warning" role="alert" for="">Costo de Llenado</label>
+                </div>
+              </div>
+          </div>
+      </div>
+      
+    <script src="./../js/app.js"></script>
+  </body>
+</html>

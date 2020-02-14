@@ -18,6 +18,8 @@ function distancia12(){
     Y2=Number(document.getElementById('inpValorY2').value);
 
     distancia= Math.sqrt( Math.pow((X2-X1),2) + Math.pow((Y2-Y1),2) );
+
+    
     let ImprimirDistancia=document.getElementById('ImprimirDistancia');
     ImprimirDistancia.innerText=distancia
 
