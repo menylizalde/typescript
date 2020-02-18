@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container">
+          <h1>Comparacion de Edades</h1>
+          <div class="jumbotron">
+              <div class="row">
+                  <div class="col-3">
+                      <div class="form-group">
+                          <label for="">Ingrese el Valor de la Compra</label>
+                          <input id="inpValorCompra" type="number" class="form-control">
+                      </div>
+                  </div>
+                  <div class="col-3">
+                      <div class="form-group">
+                          <label for="">Descuento (%)</label>
+                          <input id="inpDescuento" type="number" class="form-control">
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-6">
+                      <button id="btnCalcular" class=" mt-2 btn btn-outline-success btn-block"> CALCULAR DESCUENTO</button>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                    <div id="PrintAlert" class=" mt-3 alert alert-success text-center">SU DESCUENTO ES DE:</div>
+                </div>
+            </div>
+          </div>
+      </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
