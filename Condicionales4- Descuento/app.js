@@ -15,7 +15,7 @@ function CalculoDescuento(){
         PrintAlert.innerText=('No Aplica Descuento')
     }
      else{
-         console.log('Su descuento es de:' + ValorCompra*.2);
+         console.log('Su descuento es de:' + ValorCompra*.2;
          PrintAlert.innerText=('Su Descuento es de: ' + ValorCompra*.2);
      }
 
