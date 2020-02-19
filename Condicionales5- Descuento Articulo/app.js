@@ -12,8 +12,7 @@ function GenerarDescuento (){
     
 
     if (Clave == 01){
-        console.log('descuentp de 10');
-        PrintAlert.innerText=(`Articulo; ${Articulo}
+        PrintAlert.innerText=(`Articulo: ${Articulo}
          Clave: ${Clave} 
          Precio Original: $ ${PrecioOriginal}  
          Precio con Descuento: $ ${PrecioOriginal*0.90}`);
@@ -24,8 +23,5 @@ function GenerarDescuento (){
          Precio Original: $ ${PrecioOriginal}  
          Precio con Descuento: $ ${PrecioOriginal*0.80}`);
     }
-    else{
-        PrintAlert.innerText=(`ARTICULO SIN DESCUENTO`);
-        
-    }
+      
 }
