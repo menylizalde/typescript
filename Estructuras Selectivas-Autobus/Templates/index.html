@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container col-8">
+        <h1 class="text-center">Don Baraton</h1>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label class="text-center" for="inpTarjetas">Numero de Tarjetas</label>
+                        <select name="" id="inpTarjetas">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>                       
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="TipoTarjetas">Que Tipo de Tarjeta Tiene El Cliente</label>
+                        <select name="" id="inpTipoTarjeta">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">Otro Tipo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="TipoTarjetas">Credito Actual</label>
+                        <input type="number" id="inpCreditoActual">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <button id="btnAumento" class=" mt-3 btn btn-outline-primary btn-block">Calcular Aumento</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="PrintAlert" class=" text-center mt-3 alert alert-info" role="alert">Costo del Viaje
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./../js/app.js"></script>
+</body>
+
+</html>
