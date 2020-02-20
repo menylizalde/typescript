@@ -11,28 +11,27 @@ function VerificarTriangulo(){
     let LadoC=Number(document.getElementById('inpLadoC').value);
     const PrintAlert=document.getElementById('PrintAlert');
 
-    if (LadoA < (LadoB+LadoC)){
-        PrintAlert.innerText=('Es un Triangulo Equilatero');
+    /**
+     * Operadores Logicos
+     * 
+     * && Se tiene que cumplir todas las condiciones que divide para poder ser TRUE
+     * || con que solo se cumpla una condicion 
+     */
+
+    if (LadoA == LadoB && LadoB==LadoC){
+        /**Es un Triangulo EQUILATERO */
+        PrintAlert.innerText=('Es un triangulo EQUILATERO');
     }
-    else{
-        PrintAlert.innerText=('No es un Triangulo');
+    else if(
+    (LadoA==LadoB && LadoB != LadoC) ||	
+    (LadoA==LadoC && LadoA != LadoB)||	
+    (LadoB==LadoC && LadoB != LadoA)
+    ){
+        PrintAlert.innerText=('Es un triangulo Escaleno');
     }
 
-    if (LadoB < (LadoA+LadoC)){
-        PrintAlert.innerText=('Es un Triangulo');
+    else if (LadoA!=LadoB!=LadoC){
+        PrintAlert.innerText=('Es un ISOSELES');
     }
-    else{
-        PrintAlert.innerText=('No es un Triangulo');
-    }
-
-    if (LadoC < (LadoA+LadoB)){
-        PrintAlert.innerText=('Es un Triangulo');
-    }
-    else{
-        PrintAlert.innerText=('No es un Triangulo');
-    }
-    
-
-
-
+     
 }
