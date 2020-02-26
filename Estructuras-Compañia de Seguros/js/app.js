@@ -8,49 +8,25 @@ function CuotaSeguro(){
     let Enfermedad=Number(document.getElementById('inpEnfermedad').value);
     let Edad=Number(document.getElementById('inpEdad').value);
     let CostoPoliza='';
-
-    if (Poliza=='1' && Bebida=='1' && Lentes=='1' && Enfermedad=='1' && Edad>40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.4}`
-    }
+    let CuotaBase='';
+    let Cargos='';
     
-    else if(Poliza=='1' && Bebida=='2' && Lentes=='1' && Enfermedad=='1' && Edad>40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.3}`
+    if(Poliza==1){
+        CuotaBase=1200;
+        Cargos=0;
+        CostoPoliza=`Cuota Base : $ ${CuotaBase}
+        Cargos: $`
     }
-    else if(Poliza=='1' && Bebida=='1' && Lentes=='2' && Enfermedad=='1' && Edad>40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.35}`
+    else{
+        CuotaBase=950;
+        CostoPoliza=`Cuota Base : $ ${CuotaBase}`
+        Cargos=0
     }
-    else if(Poliza=='1' && Bebida=='1' && Lentes=='1' && Enfermedad=='2' && Edad>40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.35}`
+    if (Bebida==1){
+        Cargos=Cargos+CuotaBase*0.1
+        CostoPoliza=`Cuota Base: 1200 $ ${Cargos}`
     }
-    else if (Poliza=='1' && Bebida=='1' && Lentes=='1' && Enfermedad=='1' && Edad<40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.3}`
-    }
-    else if (Poliza=='1' && Bebida=='2' && Lentes=='1' && Enfermedad=='1' && Edad>40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.3}`
-    }
-    else if (Poliza=='1' && Bebida=='1' && Lentes=='2' && Enfermedad=='1' && Edad>40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.35}`
-    }
-    else if (Poliza=='1' && Bebida=='1' && Lentes=='1' && Enfermedad=='2' && Edad>40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.35}`
-    }
-    else if (Poliza=='1' && Bebida=='1' && Lentes=='2' && Enfermedad=='1' && Edad>40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.35}`
-    }
-    else if (Poliza=='1' && Bebida=='1' && Lentes=='2' && Enfermedad=='1' && Edad<40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.25}`
-    }
-    else if (Poliza=='1' && Bebida=='2' && Lentes=='1' && Enfermedad=='2' && Edad>40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.35}`
-    }
-    else if (Poliza=='1' && Bebida=='2' && Lentes=='1' && Enfermedad=='2' && Edad<40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.25}`
-    }
-    else if (Poliza=='1' && Bebida=='2' && Lentes=='2' && Enfermedad=='2' && Edad<40){
-        CostoPoliza=`El Costo de la Poliza es de: $${1200*1.1}`
-    }
-
-
+    else
 
 
 
