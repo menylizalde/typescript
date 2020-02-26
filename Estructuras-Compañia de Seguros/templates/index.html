@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container col-6">
+        <h1 class="text-center">Compañia de Seguros</h1>
+        <div class="text-center jumbotron">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="text-center" for="inpTipo">Tipo de Poliza</label>
+                        <select class="form-control" name="" id="inpTipo">
+                            <option value="0">Seleccione</option>
+                            <option value="1">A. Cobertura Amplia</option>
+                            <option value="2">B. Daños a Terceros</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="text-center" for="inpBebe">¿Tiene el Habito de Beber Alcohol?</label>
+                        <select class="form-control" name="" id="inpBebe">
+                            <option value="0">Seleccione</option>
+                            <option value="1">SI</option>
+                            <option value="2">NO</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="text-center" for="inpLentes">¿ Utiliza Lentes?</label>
+                        <select class="form-control" name="" id="inpLentes">
+                            <option value="0">Seleccione</option>
+                            <option value="1">SI</option>
+                            <option value="2">NO</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="text-center" for="inpEnfermedad">¿Padece alguna enfermedad Cardiaca?</label>
+                        <select class="form-control" name="" id="inpEnfermedad">
+                            <option value="0">Seleccione</option>
+                            <option value="1">SI</option>
+                            <option value="2">NO</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="TipoTarjetas">Edad</label>
+                        <input class="form-control" type="number" id="inpEdad" placeholder="Años">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button id="btnConsultar" class=" mt-3 btn btn-outline-primary btn-block">Costo del Seguro</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="PrintAlert" class=" text-center mt-3 alert alert-info" role="alert">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./../js/app.js"></script>
+</body>
+
+</html>
