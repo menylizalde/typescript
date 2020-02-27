@@ -26,6 +26,4 @@ function InitApplitacion(){
     li.innerText=` El dinero ahorrado en el año es ${acumulador}`;
     // imprimir resultado en:
     ListGroup.appendChild(li)
-
-
 }
