@@ -3,9 +3,15 @@ function eventListener(){
     button.addEventListener('click', SerieNumerica);
 }
 
-addEventListener()
+eventListener()
 
-function InitApplication(){
+function SerieNumerica(){
     let acumulador=0;
-    const
+    for( let i=100; i>0; i--){
+        console.log(i)
+        
+        
+        
+    }
+
 }
