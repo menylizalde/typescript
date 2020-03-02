@@ -11,6 +11,8 @@ function initApplication(){
     while(a !== z){
         a++;
         z--;
+        const PRintAlert=document.getElementById('PrintAlert');
+    PRintAlert.innerText=`Se encontrarán en el km ${a} dirección Zacatecas ${z} dirección Aguascalientes`
         if (a==z) {
             console.log(`Se encontrarán en el km ${a} dirección Zacatecas ${z} dirección Aguascalientes`)
             
