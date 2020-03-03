@@ -9,7 +9,7 @@ EventListener()
 function InitApplitacion(){
     let acumulador = 5;
     const ListGroup = document.getElementById('ListaPagos');
-    for(let i = 1; i <= 20; i++){
+    for(let i = 1; i <=20; i++){
 
         let PagoMensual = Number (prompt('¿Numero de Mensualidad?'));
         acumulador=acumulador*2
