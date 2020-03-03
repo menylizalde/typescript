@@ -30,6 +30,7 @@ let monto_venta_media=0;
 // para venta<500
 let venta_chica=0;
 let monto_venta_chica=0;
+const ListGroup=document.getElementById('ConsultarVentas');
 
 for(let i=0; i<Cantidad_de_Ventas; ++i) {
     let venta_actual=prompt(`Ingresa la venta${i+1}`);
@@ -47,16 +48,23 @@ for(let i=0; i<Cantidad_de_Ventas; ++i) {
         venta_chica++;
         monto_venta_chica=monto_venta_chica+venta_actual;
     }
-    let resultado=`VENTAS
-    Mayores a 100: ${venta_mayor}, Un total de ${montos_venta_mayor}.
+    let li=document.createElement('li');
+    li.setAttribute('class', 'list-group-item');
+    li.innerText=`Mayores a 100: ${venta_mayor}, Un total de ${montos_venta_mayor}.
     Entre 500 y 100: ${venta_media}, Un Total de ${monto_venta_media}.
     Menores a 500: ${venta_chica}, Un total de ${monto_venta_chica}`;
+    ListGroup.appendChild(li);
 
-    const PrintAlert=document.getElementById('PrintAlert');
-    PrintAlert.innerText=resultado
-    ImprimirVentas(`Ventas Mayores a 1000: ${venta_mayor}, ${montos_venta_mayor} `)
-    ImprimirVentas(`Mayor a 500 o igual 1000: ${venta_media}, ${monto_venta_media}`);
-    ImprimirVentas(`Ventas Menores a 500: ${venta_chica}, ${monto_venta_chica}`);
+    // let resultado=`VENTAS
+    // Mayores a 100: ${venta_mayor}, Un total de ${montos_venta_mayor}.
+    // Entre 500 y 100: ${venta_media}, Un Total de ${monto_venta_media}.
+    // Menores a 500: ${venta_chica}, Un total de ${monto_venta_chica}`;
+
+    // const PrintAlert=document.getElementById('PrintAlert');
+    // PrintAlert.innerText=resultado
+    // ImprimirVentas(`Ventas Mayores a 1000: ${venta_mayor}, ${montos_venta_mayor} `)
+    // ImprimirVentas(`Mayor a 500 o igual 1000: ${venta_media}, ${monto_venta_media}`);
+    // ImprimirVentas(`Ventas Menores a 500: ${venta_chica}, ${monto_venta_chica}`);
 
 }
 
