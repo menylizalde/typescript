@@ -27,9 +27,12 @@ function InitApplitacion(){
 
 
         }
-        else if(itercaciones!==Resultado){
-            console.log(`${itercaciones} no pertenece a la Serie`)
-            
+        else  if(itercaciones!==Resultado){
+            // console.log(`${itercaciones} no pertenece a la Serie`)
+            const li=document.createElement('li');
+           li.setAttribute('class', 'list-group-item');
+           li.innerText=`${itercaciones} NO PERTENECE A LA SERIE`
+           ListGroup.appendChild(li)            
         }
         // const li = document.createElement('li'); /*creamos el elemento li, con createElement*/
         // li.setAttribute('class', 'list-group-item'); // para dar estilo al li
