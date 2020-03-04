@@ -1,4 +1,4 @@
-
+﻿
 
 function EventListener(){
     const button = document.getElementById('btnInit');
