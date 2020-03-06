@@ -11,30 +11,33 @@ function IniciarAplicacion(){
 
     let acumulador=0; 
      
+    const ListGroup = document.getElementById('Resultados');
+    ListGroup.innerText='';
+    const li = document.createElement('li'); /*creamos el elemento li, con createElement*/
+    li.setAttribute('class', 'list-group-item'); // para dar estilo al li
+    
     for(let i = 1; i<numero; i++){
         
-        // let =Number(prompt(`Ingresa la Clave Empresa ${i}:`));
-        const ListGroup = document.getElementById('Resultados');
-        // console.log(`Empresa${i} clave ${clave}.`)
-        // acumulador+=clave;
-    
         if (numero % i == 0) {
             divisor+=i         
             
+            console.log(numero, divisor)
         }
-        if(numero==divisor){
-            const li = document.createElement('li'); /*creamos el elemento li, con createElement*/
-            li.setAttribute('class', 'list-group-item'); // para dar estilo al li
-            li.innerText=`El Numero ${numero} es Perfecto`;
-            // para difinir la posicion del li con la propiedad appendChild
-            ListGroup.appendChild(li);
-        }
-        else{
-            const li = document.createElement('li'); /*creamos el elemento li, con createElement*/
-            li.setAttribute('class', 'list-group-item'); // para dar estilo al li
-            li.innerText=`El Numero ${numero} NO es Perfecto`;
-            // para difinir la posicion del li con la propiedad appendChild
-            ListGroup.appendChild(li);
-        }
-    }
+    
+
+}
+if(divisor==numero){
+    
+    li.innerText=`El Numero ${numero} ES NUMERO PERFECTO`;
+    // para difinir la posicion del li con la propiedad appendChild
+    ListGroup.appendChild(li);
+
+}
+else{
+    li.innerText=`El Numero ${numero} NO ES NUMERO PERFECTO`;
+    // para difinir la posicion del li con la propiedad appendChild
+    ListGroup.appendChild(li);
+
+}
+ 
 }
