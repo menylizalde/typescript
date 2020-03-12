@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background: #f2e205;
+}
+/* body nav{
+    background: #1e441e;
+}
+body nav a img{
+    width: 200px;
+    height: 80px;
+}
+body nav div{
+    color: dodgerblue;
+
+} */
