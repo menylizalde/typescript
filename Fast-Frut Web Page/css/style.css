@@ -1,20 +1,32 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Roboto', sans-serif;
-    background: #f2e205;
-}
-/* body nav{
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+  }
+.bg-green{
     background: #1e441e;
 }
-body nav a img{
-    width: 200px;
-    height: 80px;
+.img{
+    width: 100vw;
+    height: 100vh;
 }
-body nav div{
-    color: dodgerblue;
 
-} */
+.navbar-dark .navbar-nav .active>.nav-link{
+    color: #ff3b01;
+    font-family: 'Roboto', sans-serif;
+    justify-content: flex-end;
+}
+.navbar-expand-md .navbar-collapse {
+    /* width: 0; */
+    height: 0px;
+    background-color: springgreen;
+}
+.navbar-dark .navbar-nav{
+    width: 80vw;
+    /* background-color:greenyellow; */
+    position: fixed;
+    left: 200px;
+    justify-content: space-around;
+}
+.carrito{
+    color: greenyellow;
+}
