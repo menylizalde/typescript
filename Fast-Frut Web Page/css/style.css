@@ -3,7 +3,10 @@ body {
     padding-top: 4.5rem;
   }
 .bg-green{
-    background: #1e441e;
+    background:#152614;
+     /* #152614 */
+    /* #152614 */
+    #2a7221
 }
 .img{
     width: 100vw;
@@ -14,6 +17,8 @@ body {
     color: #ff3b01;
     font-family: 'Roboto', sans-serif;
     justify-content: flex-end;
+    font-weight: bold;
+
 }
 .navbar-expand-md .navbar-collapse {
     /* width: 0; */
@@ -29,6 +34,7 @@ body {
 }
 .carrito{
     color: greenyellow;
+    
 }
 
 /*
@@ -81,14 +87,49 @@ a:hover {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+.marketing .col-lg-12 {
+  height: 100vh;
   margin-bottom: 1.5rem;
   text-align: center;
+  /* background-color: firebrick; */
 }
 .marketing h2 {
   font-weight: 400;
+  text-align: center;
+  font-family:'Roboto', sans-serif;
+  color: #00bc0c;
+  font-weight: bold;
+  /* background-color: royalblue; */
 }
-.marketing .col-lg-4 p {
+.marketing .col-lg-12 p {
   margin-right: .75rem;
   margin-left: .75rem;
+  text-align: justify;
+  font-family:'Roboto', sans-serif;
+  /* background-color: red; */
+}
+.form-inline{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /* background: red; */
+  
+}
+.btn-orange{
+  background: #ff3b01;
+  font-weight: bold;
+  color: #ffffff;
+}
+.precio-productos{
+  font-weight: bold;
+}
+.bg-yelow{
+  background-color: #152614;
+}
+.text-green{
+  color: #00bc0c;
+}
+.direccion{
+  color: #ff3b01;
+  text-align: justify;
 }
