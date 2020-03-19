@@ -1,6 +1,7 @@
 eventListener();
 let ArregloA=[];
 let ArregloB=[];
+let ArregloC=[];
 
 
 function eventListener(){
@@ -33,30 +34,30 @@ function NumerosAleatios(event){
 function RellenarArreglo(TamanoArray){
     
 
-
-    for(let i=0; i<1; i++){
+    for(let i=0; i<TamanoArray; i++){
         let sumar;
         ArregloA[i]=Math.floor(Math.random()*(101-(-100))+(-100));
-        console.log(`Este es el Arreglo 1 ${ArregloA[i]}`)
-
+        
         ArregloB[i]=Math.floor(Math.random()*(101-(-100))+(-100));
-        console.log(`Este es el Areglo 2 ${ArregloB}`)
-
+        
     }
+    console.log(`Este es el Arreglo 1 ${ArregloA}`)
+    console.log(`Este es el Areglo 2 ${ArregloB}`)
        
     
 }
 function suma(){
     const listGroup=document.getElementById('PrintZone');
-    for (let i=0; i<1; i++){
+    for (let i=0; i<ArregloA.length; i++){
         
         sumar=ArregloA[i]+ArregloB[i]
-        console.log(`Esta es la suma ${sumar}`)
+        ArregloC[i]=sumar
+        //console.log(`Esta es la suma ${sumar}`)
         
         const li = document.createElement("li");
             li.setAttribute('class', 'list-group-item');
             listGroup.appendChild(li);
-            li.innerText=`Suma ${sumar}`
+            li.innerText=`Suma ${ArregloC[i]}`
     }
     
 }
@@ -67,11 +68,16 @@ function suma(){
 
 
 function resta(){
-    for (let i=0; i<1; i++){
+    //A=[1,2,5,-12,10]
+    //B=[2,1,4,-3,7]
+    //C=A-B -> C=[-1, 1, 1, -15, 3]
+    
+    for (let i=0; i<ArregloA.length; i++){
 
         restar=ArregloB[i]-ArregloA[i]
-        console.log(`Esta es la resta ${restar}`)
+        ArregloC[i]=restar
     }
+    console.log(`Esta es la resta ${ArregloC}`)
 }
 
 
