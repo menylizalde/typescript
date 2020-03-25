@@ -1,38 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Ejercicio 3</title>
   </head>
   <body>
-      <div class="container">
-          <div class="jumbotron">
-              <div class="row">
-                  <div class="col-12 text-center">
-                      <h1>Ejercicio 3</h1>
-                  </div>
-              </div>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center">Práctica 3</h1>
+          </div>
+        </div>
 
-              <div class="row">
-                  <div class="col-12">
-                      <div class="form-group">
 
-                          <label for="">Ingrese el Numero de Arreglos:</label>
-                          <input type="text" id="inpNumeroArray" class="form-control">
-                          <button class="btn btn-outline-success btn-block" id="mostrarInputs">Iniciar aplicación</button>
-                      </div>
-                  </div>
-              </div>
+        <div id="output">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                  <label for="">Ingrese el número de inputs: </label>
+                  <input type="number" name="" id="NumeroInputs" class="form-control" placeholder="Ingrese número de inputs">
+                </div>
+            </div>
+            <br>
+
+
+        </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <button class="btn btn-outline-success btn-block" id="btnMostrarInputs" >Iniciar Aplicación</button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+        <div class="row">
+          <div class="col-12">
+              <ul class="list-group-item" id="mostrarArreglo"></ul>
           </div>
       </div>
 
-      
-    
+
+      </div>
+    </div>
+
 
     <script src="./app.js"></script>
   </body>

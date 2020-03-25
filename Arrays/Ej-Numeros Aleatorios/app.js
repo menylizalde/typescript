@@ -1,95 +1,93 @@
-const NumArrays= document.getElementById('inpNumeroArray');
-eventListener()
-
-
+const output=document.getElementById('output');
+eventListener();
 
 function eventListener(){
-    document.getElementById('inpNumeroArray').addEventListener('click', mostrarInputs);
-    
+    document.getElementById('btnMostrarInputs').addEventListener('click', mostrarInputs);
 }
 
 function mostrarInputs(){
-    const entradas= Number(document.getElementById('inpNumeroArray').value);
+    const NumeroInputs = Number(document.getElementById('NumeroInputs').value);
 
-    if(entradas > 1000 || entradas <= 0) return;
+    if(NumeroInputs>1000 || NumeroInputs<=0) return 0;
 
-    eliminarElementos();
-    const row= document.createElement('div');
-    row.setAttribute('class', 'row');
+    EliminarElementos();
 
-    for(let i = 0;i<entradas; i++){
-        
-        const divCol= document.createElement('div');
-        divCol.setAttribute('class', 'col-12');
 
-        const divFG= document.createElement('div');
-        divFG.setAttribute('class', 'form-group');
+        const row=document.createElement('div');
 
-        const label= document.createElement('div');
-        label.innerText=`Ingrese el numero ${i}`
+        row.setAttribute('class', 'row');
 
-        const input= document.createElement('input');
-        input.setAttribute('type', 'number');
-        input.setAttribute('id', `valorInput${i}`);
-        input.setAttribute('clas', 'form-control');
+        for(let i=0; i<NumeroInputs; i++){
+            const divCol=document.createElement('div');
+            divCol.setAttribute('class', 'col-12');
 
-        row.appendChild(divCol);
-        divCol.appendChild(divFG)
-        divFG.appendChild(label)
-        divFG.appendChild(input)
+            const divFG = document.createElement('div');
+            divFG.setAttribute('class', 'form-group');
+
+            const label = document.createElement('label');
+            label.innerText=`Ingrese número a guardar en el arreglo`;
+
+            const input = document.createElement('input');
+            input.setAttribute('type', 'number');
+            input.setAttribute('id', `valorInput${i}`);
+            input.setAttribute('class', 'form-control');
+
+            row.appendChild(divCol);
+            divCol.appendChild(divFG);
+            divFG.appendChild(label);
+            divFG.appendChild(input);
+
+        }
+            output.appendChild(row);
+
+            const buttonObtenerResultado = document.createElement("button");
+            buttonObtenerResultado.setAttribute('class', 'btn btn-outline-success btn-block');
+            buttonObtenerResultado.setAttribute('id', 'btnCalcularResultado');
+
+
+            buttonObtenerResultado.innerText="Resultado";
+            row.appendChild(buttonObtenerResultado);
+
+            document.getElementById('btnCalcularResultado').addEventListener('click', RealizarComparacion);
+
     }
-    NumArrays.appendChild(row)
-
-    const buttonObtenerResultado = document.createElement("button");
-    buttonObtenerResultado.setAttribute('class', 'btn btn-outline-success btn-block');
-    buttonObtenerResultado.setAttribute('id', 'btnCalcularResultado');
-    buttonObtenerResultado.innerText = "Obtener resultado";
-
-    row.appendChild(buttonObtenerResultado);
-
-    document.getElementById('btnCalcularResultado').addEventListener('click', RealizarComparación);
-
-}
-
-function RealizarComparación() {
-
-    const numeroInputs = document.getElementsByTagName('input');//tagname es para llamar todos los elementos que cumplan con ser input
 
 
-    let acumulador = 0;
-    for (let x = 0; x < numeroInputs.length; x++)//length es la longitud del index
-    {
 
-        for (let y = x + 1; y < numeroInputs.length; y++) {
-            if (numeroInputs[x].value == numeroInputs[y].value) {
-                numeroInputs[y].value = " ";
+    function RealizarComparacion(){
+
+        const NumeroInputs=document.getElementsByTagName('input');
+
+        let acumulador=0;
+
+        for(let x=0; x<NumeroInputs.length; x++){
+            for(let y=x+1; y<NumeroInputs.length; y++){
+                if(NumeroInputs[x].value==NumeroInputs[y].value){
+                    NumeroInputs[y].value="";
+                }
             }
+
+            console.log(NumeroInputs[x].value);
         }
 
-        // acumulador += Number(numeroInputs[x].value);
-        console.log(numeroInputs[x].value);
+        MostrarDatos(NumeroInputs);
     }
 
-    mostrarDatos(numeroInputs);
-
-
-}
-
-function eliminarElementos() {
-
-    while (output.firstChild) {
-
+function EliminarElementos(){
+    while(output.firstChild){
         output.firstChild.remove();
-    }
-}
-let Print=document.getElementById('zonaPrint');
-function mostrarDatos(numeroInputsArreglo) {
-    let strPrint='';
-    for(let x=0;x<numeroInputsArreglo.length;x++){
-        if(numeroInputsArreglo[x]!=" "){ 
-            strPrint+=`${numeroInputsArreglo[x].value}`;
-
         }
+}
+
+function MostrarDatos(NumeroInputsArreglo){
+
+    const MostrarValoresUl = document.getElementById("mostrarArreglo");
+
+    for(let i=0; i<NumeroInputsArreglo; i++){
+         const li = document.createElement('li');
+        li.setAttribute('class','list-group-item');
+        li.innerHTML = `<p>Index: ${i} </p> <p>Valor: ${NumeroInputsArreglo[i]} </p>`;
+
+        MostrarValoresUl.appendChild(li);
     }
-    Print.innertext=strPrint;
 }
