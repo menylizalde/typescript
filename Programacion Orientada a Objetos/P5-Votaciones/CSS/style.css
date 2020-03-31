@@ -1,0 +1,12 @@
+.jumbotron{
+    background-color: rgb(162, 162, 253);
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+}
+
+.btn-secondary{
+    color: black;
+}

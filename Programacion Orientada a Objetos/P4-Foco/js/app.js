@@ -3,7 +3,7 @@ const foco = new foco();
 const imagen = document.getElementById("imagen");
 
 function eventListener(){
-    document.getElementById('btnEncender').addEventListener("click", CambioEstado)
+    document.getElementById("btnEncender").addEventListener("click", CambioEstado)
     
 }
 
