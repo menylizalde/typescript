@@ -1,16 +1,17 @@
-const ContenidoActividad = document.querySelector("#txActividad");
-const ListaTareas = document.querySelector("#lista-tareas");
-
 eventListener();
 
-function eventListener(){
-    document
-    .querySelector("#Formulario")
-    .addEventListener("submit", AddActividad);
+const ContenidoInput = document.querySelector("#txActividad");
+const ListaTareas = document.querySelector("#lista-tareas");
 
-    ListaTareas.addEventListener("click", cargarTarea);
+function eventListener() {
+  document
+    .querySelector("#Formulario")
+    .addEventListener("submit", ObtenerTarea);
 }
 
-function AddActividad(event){
-    if(ContenidoActividad.value)
+function ObtenerTarea(event) {
+  event.preventDefault();
+  const IntanciaTareas = new Actividades(ContenidoInput.value);
+
+  IntanciaTareas.AgregarDOM(ListaTareas);
 }
