@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Lista de Tareas</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,33 +10,38 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./../CSS/style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron">
+            <h1 class="text-center">To Do</h1>
             <div class="row">
-                <div class="col-12 text-center">
-                    <h1>Tweets Local Storage</h1>
+                <div class="col-12">
+                    <form action="#" id="Formulario">
+                        <div class="form-group">
+                            <label for="">Ingresar Actividad:</label>
+                            <input type="text" id="txActividad" class="form-control" placeholder="Ingresa la actividad a realizar">
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-outline-success btn-block">Agregar Actividad</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-
             <div class="row">
-                <div class="col-6 pull-left">
-                    <div class="form-group">
-                        <form action="#" id="formulario">
-                            <label for="tweet">Tweet</label>
-                            <textarea id="txTweet" rows="3" class="form-control"></textarea>
-                            <button type="submit" class="mt-2 btn btn-outline-info btn-block">Agregar Tweet</button>
-                        </form>
-                    </div>
-                 </div>
-                 <div class="col-6">
-                     <h2>Tweets:</h2>
-                     <ul id="lista-tweets" class="list-group"></ul>
-                 </div>
+                <div class="col-6">
+                    <h2 class="text-center">Actividades Pendientes:</h2>
+                    <ul id="lista-tareas" class="list-group"></ul>
+                </div>
+                <div class="col-6">
+                    <h2 class="text-center">Actividades Realizadas:</h2>
+                    <ul id="lista-tareas" class="list-group"></ul>
+                </div>
             </div>
-
         </div>
     </div>
 
@@ -45,9 +50,6 @@
 
 
     <!-- Optional JavaScript -->
-    <script src="./../JS/LocalStorage.class.js"></script>
-    <script src="./../JS/Tweets.class.js"></script>
-    <script src="./../JS/app.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
