@@ -17,19 +17,20 @@ function EventListener() {
 }
 
 function moveCar(event) {
-  console.log(event);
+  carro.MoverCarro(event.key, imagen);
+  const response= carro.VerificarColision(PosicionImagenes);
 
-  carro.MoverCarro(event.key, imagen, PosicionImagenes);
+  if(response!=null){
+    Premios.EliminarPremio(contenedor, PosicionImagenes[response].id);
+    PosicionImagenes.splice(response, 1);
+  }
 }
 
 function PonerPremio(event) {
-
   const premio = new Premios(event.x, event.y);
 
   PosicionImagenes.push(premio.CrearImagen(contenedor, SizeMarginLeft));
   console.log(PosicionImagenes);
-  
-  
 }
 
 function ObtenerMargin() {

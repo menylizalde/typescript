@@ -7,7 +7,7 @@ class Car {
     this.posicionY = posicionY;
   }
 
-  MoverCarro(direccion, imagen, PosicionesCaquitas) {
+  MoverCarro(direccion, imagen) {
     switch (direccion) {
       case "ArrowUp":
         if (this.posicionY <= 0) return;
@@ -30,7 +30,7 @@ class Car {
         imagen.style.top = `${(this.posicionY += 10)}px`;
         break;
     }
-    this.VerificarColision(PosicionesCaquitas);
+    
   }
 
   VerificarColision(PosicionesCaquitas = []) {
@@ -43,8 +43,9 @@ class Car {
         this.posicionY >= PosicionesCaquitas[i].styleTop &&
         this.posicionY <= PosicionesCaquitas[i].styleTopMax
       ) {
-        console.log("esta tocando caquita");
+        return i;
       }
     }
+    return null;
   }
 }
