@@ -1,38 +1,50 @@
-const tablaCarrito = document.querySelector("#lista-carrito tbody");
+const tablaCarrito=document.querySelector('#lista-carrito tbody')
 
 eventListener();
 
 function eventListener() {
-  document
-    .querySelector("#lista-cursos")
-    .addEventListener("click", GuardarCursoCarrito);
-
-  iniciarCarrito();
+    document.querySelector('#lista-cursos').addEventListener('click', GuardarCursoCarrito);
+    document.querySelector('#carrito').addEventListener('click',eliminarCarrito);
+    document.querySelector('#vaciar-carrito').addEventListener('click',vaciarCarrito)
+    iniciarCarrito();
 }
 
 function GuardarCursoCarrito(event) {
-  event.preventDefault();
+    event.preventDefault();
+    if (event.target.classList.value.search('agregar-carrito') == -1) return;//busca la clase agregar carrito y arroja su posición en la linea de codigo cuando osu valor es 
+    const curso = event.target.parentElement.parentElement;// el div en el eque se encuentra
+const informacioncurso={
+    imagen: curso.querySelector('img').src,
+    titulo: curso.querySelector('h4').textContent,
+    precio: curso.querySelector('.precio span').textContent,
+    id: curso.querySelector('a').getAttribute('data-id'),
+    
+};
 
-  if (event.target.classList.value.search("agregar-carrito") == -1) return;
-  const curso = event.target.parentElement.parentElement;
+ const carrito = new Carrito();
 
-  const informacioncurso = {
-    imagen: curso.querySelector("img").src,
-    titulo: curso.querySelector("h4").textContent,
-    precio: curso.querySelector(".precio span").textContent,
-    id: curso.querySelector("a").getAttribute("data-id"),
-  };
+ carrito.AgregarCursoCarrito(informacioncurso,tablaCarrito,true)
 
-  const carrito = new Carrito();
 
-  carrito.AgregarCursoCarrito(informacioncurso, tablaCarrito, true);
 }
 
-function iniciarCarrito() {
-  const cursosLs = LocalStorageManipular.ObtenerCursoLocalStorage();
+function iniciarCarrito(){
+    const cursosLS=LocalStorageManipular.ObtenerCursoLocalStorage();
 
-  for (let i = 0; i < cursosLs, length; i++) {
-    const carrito = new Carrito();
-    carrito.AgregarCursoCarrito(cursosLs[i], tablaCarrito, false);
-  }
+    for(let i=0;i<cursosLS.length;i++){
+        const carrito=new Carrito();
+        carrito.AgregarCursoCarrito(cursosLS[i],tablaCarrito,false)
+    }
+}
+
+function eliminarCarrito(event){
+    if(event.target.className!="borrar-curso")return;
+
+    Carrito.eliminarCursoCarrito(event.target.parentElement.parentElement);
+    
+    
+}
+
+function vaciarCarrito(){
+Carrito.vaciarCarrito(tablaCarrito);
 }

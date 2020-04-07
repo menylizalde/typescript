@@ -1,8 +1,11 @@
 class Actividades {
   contenido = "";
 
+  localStorage;
+
   constructor(contenido) {
     this.contenido = contenido;
+    this.localStorage = new LocalStorage();
   }
 
   AgregarDOM(contenedor) {
@@ -21,5 +24,10 @@ class Actividades {
     contenedor.appendChild(li);
     li.appendChild(btnEliminar);
     btnEliminar.appendChild(span);
+  }
+
+  static EliminarTareaDom(event) {
+    if (event.target.tagName !== "SPAN") return;
+    event.target.parentElement.parentElement.remove();
   }
 }
