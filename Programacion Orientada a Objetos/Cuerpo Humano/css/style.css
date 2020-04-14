@@ -1,0 +1,14 @@
+.cursor {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid red;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cursor:hover {
+    background: red;
+}
